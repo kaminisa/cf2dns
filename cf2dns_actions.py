@@ -114,7 +114,6 @@ def main(cloud):
                 for sub_domain, lines in sub_domains.items():
                     # 删除对应 recordType 的解析
                     ret = cloud.get_record(domain, 20, sub_domain, RECORD_TYPE)
-                    print(ret)
                     if ret["code"] == 0:
                         for record in ret["data"]["records"]:
                             if record["line"] == "移动" or record["line"] == "联通" or record["line"] == "电信":
